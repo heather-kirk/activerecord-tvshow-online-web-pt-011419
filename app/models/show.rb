@@ -21,9 +21,11 @@ class Show < ActiveRecord::Base
   end 
   
   def self.ratings_sum
+    Show.sum(:<rating>)
   end 
   
-  def self.popular_shows 
+  def self.popular_shows
+    Show.where()
   end 
   
   def self.shows_by_alphabetical_order
